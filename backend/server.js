@@ -8,7 +8,7 @@ const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/user");
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://mini-ciaan-linke.netlify.app/login" }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
