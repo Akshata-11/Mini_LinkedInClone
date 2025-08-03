@@ -10,7 +10,7 @@ const userRoutes = require("./routes/user");
 const app = express();
 // app.use(cors({ origin: "https://mini-ciaan-linke.netlify.app/login" }));
 
-const allowedOrigins = ["https://mini-ciaan-linke.netlify.app"];
+const allowedOrigins = ["https://mini-ciaan-linke.netlify.app/api"];
 
 app.use(
   cors({
