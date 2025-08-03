@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://mini-linked-in-clone.vercel.app/",
+  baseURL: "https://mini-linked-in-clone.vercel.app",
 });
 
 API.interceptors.request.use((req) => {
