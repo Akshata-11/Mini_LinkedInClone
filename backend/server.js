@@ -8,7 +8,23 @@ const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/user");
 
 const app = express();
-app.use(cors({ origin: "https://mini-ciaan-linke.netlify.app/login" }));
+// app.use(cors({ origin: "https://mini-ciaan-linke.netlify.app/login" }));
+
+const allowedOrigins = ["https://mini-ciaan-linke.netlify.app"];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
