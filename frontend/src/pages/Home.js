@@ -8,11 +8,17 @@ function Home() {
   const [content, setContent] = useState("");
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   API.get("/posts")
+  //     .then((res) => setPosts(res.data))
+  //     .catch(() => navigate("/login"));
+  // }, []);
+
   useEffect(() => {
     API.get("/posts")
       .then((res) => setPosts(res.data))
       .catch(() => navigate("/login"));
-  }, []);
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
