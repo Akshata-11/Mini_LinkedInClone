@@ -1,0 +1,47 @@
+body {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 1.5),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(background.jpg);
+  height: 150vh;
+  background-size: cover;
+}
+
+.Login-container {
+  background-color: #e9ecef;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 24rem;
+  margin: 5rem auto;
+  height: 32rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.login-input {
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #dbe4ff;
+}
+
+.login-heading {
+  color: #364fc7;
+  font-weight: 800;
+}
+
+.login-btn {
+  margin-top: 4rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #364fc7;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
+import "./css/Register.css";
 
 function Register() {
   const [form, setForm] = useState({
@@ -26,19 +27,42 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Register</h2>
-      <input name="name" placeholder="Name" onChange={handleChange} />
-      <input name="email" placeholder="Email" onChange={handleChange} />
-      <input
-        name="password"
-        type="password"
-        placeholder="Password"
-        onChange={handleChange}
-      />
-      <input name="bio" placeholder="Bio" onChange={handleChange} />
-      <button type="submit">Register</button>
-    </form>
+    <div className="register-container">
+      <form onSubmit={handleSubmit}>
+        <h2 className="reg-heading">
+          Welcome Back!! <span>Sign Up Here</span>{" "}
+        </h2>
+
+        <input
+          className="reg-input"
+          name="name"
+          placeholder="Name"
+          onChange={handleChange}
+        />
+        <input
+          className="reg-input"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <input
+          className="reg-input"
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
+        <input
+          className="reg-input"
+          name="bio"
+          placeholder="Bio"
+          onChange={handleChange}
+        />
+        <button className="reg-btn" type="submit">
+          Sign Up
+        </button>
+      </form>
+    </div>
   );
 }
 

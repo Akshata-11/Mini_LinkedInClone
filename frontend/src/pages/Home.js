@@ -36,6 +36,7 @@ function Home() {
               <textarea
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
+                placeholder="Write here !"
               />
               <button className="post-btn" type="submit">
                 Post

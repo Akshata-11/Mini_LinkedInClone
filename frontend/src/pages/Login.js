@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
+import "./css/Login.css";
 
 function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -21,17 +22,27 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <input name="email" placeholder="Email" onChange={handleChange} />
-      <input
-        name="password"
-        type="password"
-        placeholder="Password"
-        onChange={handleChange}
-      />
-      <button type="submit">Login</button>
-    </form>
+    <div className="Login-container">
+      <form onSubmit={handleSubmit}>
+        <h2 className="login-heading">Ready to Post? Sign In</h2>
+        <input
+          className="login-input"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <input
+          className="login-input"
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
+        <button className="login-btn" type="submit">
+          Sign In
+        </button>
+      </form>
+    </div>
   );
 }
 
