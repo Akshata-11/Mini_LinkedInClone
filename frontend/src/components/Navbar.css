@@ -1,0 +1,113 @@
+/* 
+---- 01-TYPOGRAPHY 
+
+-FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+   
+-Font weights
+
+
+-Line Heights
+Default :1
+
+-SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+
+---- 02 COLORS
+
+-Primary : #364fc7
+ Gray Color :#343a40
+-Tints:
+-Shades:
+-Accents:
+-Greys:
+
+---- 05 SHADOWS
+
+
+---- 06 BORDER- EADIUS
+
+
+---- 07 WHITESPACE
+-SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*  //gloabal reset */
+
+nav {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  background-color: #8a9197;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  position: relative;
+}
+
+.a {
+  display: flex; /*Why did this*/
+  background-color: #fff;
+  text-decoration: none;
+  color: #555;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  border-radius: 9px;
+  /* flex-direction: column; */
+  /*Put transition on original 'state'*/
+  transition: background-color 0.3s;
+}
+
+.a:hover,
+.a:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn-icon {
+  width: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #5c7cfa;
+  text-decoration: none;
+  padding: 18px;
+  margin: 18px;
+}
+
+.btn-logout {
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #495057;
+  position: absolute;
+  left: 108rem;
+}
+btn:last-child {
+  background: red;
+  color: red;
+}
+p {
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+}
