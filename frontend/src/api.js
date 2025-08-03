@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://mini-linkedinclone.onrender.com",
+  baseURL: "https://mini-linkedinclone.onrender.com/api",
 });
 
 API.interceptors.request.use((req) => {
