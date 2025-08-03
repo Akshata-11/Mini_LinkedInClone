@@ -12,18 +12,19 @@ const app = express();
 
 const allowedOrigins = ["https://mini-ciaan-linke.netlify.app"];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.some((o) => origin.startsWith(o))) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS: " + origin));
-      }
-    },
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.some((o) => origin.startsWith(o))) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS: " + origin));
+//       }
+//     },
+//     credentials: true,
+//   })
+// );
 
 app.use(express.json());
 
